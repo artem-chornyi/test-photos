@@ -1,11 +1,11 @@
 import React from 'react';
+import { PhotoList } from '../../components';
+
 
 const Photos = () => {
     console.log('Photos');
     return (
-        <div>
-            Photos
-        </div>
+        <PhotoList/>
     )
 };
 
