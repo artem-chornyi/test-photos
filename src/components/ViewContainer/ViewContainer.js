@@ -1,9 +1,17 @@
-import React from 'react';
+import React from "react";
+import { makeStyles } from '@mui/styles';
+import styles from './styles';
 
-const ViewContainer = () => {
+const useStyles = makeStyles(styles);
+
+const ViewContainer = ({children}) => {
+    const classes = useStyles();
+
     return (
-        <div>
-            ViewContainer
+        <div className={ classes.viewContainer }>
+            <div className={ classes.wrapper }>
+                { children }
+            </div>
         </div>
     )
 };
