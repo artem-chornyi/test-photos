@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Photos = () => {
+    console.log('Photos');
     return (
         <div>
             Photos

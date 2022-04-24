@@ -3,11 +3,15 @@ import CustomCard from './CustomCard';
 import CustomInput from './CustomInput';
 import CustomModal from './CustomModal';
 import CustomPagination from './CustomPagination';
+import CustomHeader from './CustomHeader';
+import CustomRoutLink from './CustomRoutLink';
 
 export {
     CustomButton,
     CustomCard,
     CustomInput,
     CustomModal,
-    CustomPagination
+    CustomPagination,
+    CustomHeader,
+    CustomRoutLink
 };
