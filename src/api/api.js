@@ -1,6 +1,6 @@
 import values from "../theme/values";
 
-const BASE_API = 'http://jsonplaceholder.typicode.com';
+const BASE_API = 'https://jsonplaceholder.typicode.com';
 
 
 

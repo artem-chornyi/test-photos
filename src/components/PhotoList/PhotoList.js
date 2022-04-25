@@ -13,7 +13,6 @@ const PhotoList = ({photos}) => {
     const [photosAfterChange, stePhotosAfterChange] = useState([]);
 
     useEffect(() => {
-        console.log('test');
         stePhotosAfterChange(photos)
     }, [photos])
 
