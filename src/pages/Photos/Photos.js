@@ -56,6 +56,7 @@ const Photos = () => {
             })
             .catch((err) => {
                 alert('Error');
+                console.log(err);
             })
             .finally(() => {
                 setLoading(false);
@@ -73,6 +74,7 @@ const Photos = () => {
                 })
                 .catch((err) => {
                     alert('Error');
+                    console.log(err);
                 })
                 .finally(() => {
                     setLoading(false);
