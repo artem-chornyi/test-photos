@@ -4,6 +4,7 @@ import ViewContainer from './ViewContainer';
 import Layout from './Layout';
 import MainContent from './MainContent';
 import ScrollToTop from './ScrollToTop';
+import Preloader from './Preloader';
 
 export {
     PhotoList,
@@ -11,5 +12,6 @@ export {
     ViewContainer,
     Layout,
     MainContent,
-    ScrollToTop
+    ScrollToTop,
+    Preloader
 };

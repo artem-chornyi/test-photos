@@ -1,10 +1,22 @@
-import React from 'react';
+import React from "react";
+import Button from '@mui/material/Button';
+import { makeStyles } from '@mui/styles';
+import styles from './styles';
 
-const CustomButton = () => {
+const useStyles = makeStyles(styles);
+
+const CustomButton = ({ onClick, value, ...props }) => {
+    const classes = useStyles();
+
     return (
-        <div>
-            CustomButton
-        </div>
+        <Button
+            onClick={ onClick }
+            className={ classes.button }
+            variant='contained'
+            { ...props }
+        >
+            { value }
+        </Button>
     )
 };
 

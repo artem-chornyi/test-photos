@@ -1,10 +1,9 @@
 import React from 'react';
+import { CustomCard } from '../Ui';
 
-const PhotoItem = () => {
+const PhotoItem = ({ albumId, id, thumbnailUrl, title, url }) => {
     return (
-        <div>
-            PhotoItem
-        </div>
+        <CustomCard/>
     )
 };
 

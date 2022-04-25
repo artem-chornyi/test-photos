@@ -1,11 +1,20 @@
 import React from 'react';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
-const CustomPagination = () => {
+const CustomPagination = ({ count, onChange }) => {
     return (
-        <div>
-            CustomPagination
-        </div>
-    )
+        <Stack spacing={2}>
+        <Pagination
+            count={ count }
+            showFirstButton
+            showLastButton
+            siblingCount={3}
+            size="large"
+            onChange={ onChange }
+        />
+        </Stack>
+    );
 };
 
 export default CustomPagination;
