@@ -8,6 +8,7 @@ import {
     CustomButton,
     CustomInput,
     CustomPagination,
+    CustomModal
 } from '../../components/Ui'
 
 import values from '../../theme/values';
@@ -23,6 +24,7 @@ const Photos = () => {
     const [photos, setPhotos] = useState([]);
     const [count, setCount] = useState(0);
     const [loadin, setLoading] = useState(false);
+    const [open, setOpen] = useState(true);
 
     useEffect(() => {
         setLoading(true);
@@ -50,6 +52,10 @@ const Photos = () => {
         setPages(number);
     }
 
+    const handleClose = () => {
+        setOpen(false);
+    }
+
     const checkedPotos = () => (
         <div className={ classes.content }>
             {photos && (
@@ -58,10 +64,12 @@ const Photos = () => {
                 />
             )}
             {count > 0 && (
-                <CustomPagination
-                    count={ count }
-                    onChange={ handlerPagination }
-                />
+               <div className={ classes.pagination }>
+                    <CustomPagination
+                        count={ count }
+                        onChange={ handlerPagination }
+                    />
+               </div>
             )}
         </div>
     )

@@ -3,6 +3,12 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         gap: 30
+    },
+
+    pagination: {
+        '& .MuiPagination-ul': {
+            justifyContent: 'center'
+        }
     }
 });
 

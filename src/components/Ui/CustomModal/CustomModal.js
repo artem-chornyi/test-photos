@@ -1,11 +1,35 @@
-import React from 'react';
+import React from "react";
+import Modal from '@mui/material/Modal';
+import { makeStyles } from "@mui/styles";
+import styles from "./styles";
 
-const CustomModal = () => {
+const useStyles = makeStyles(styles);
+
+
+
+const CustomModal = ({ open, handleClose, photo, }) => {
+    const {
+        title,
+        url
+    } = photo;
+    const classes = useStyles();
+
+
+
+
     return (
-        <div>
-            CustomModal
-        </div>
+        <Modal
+            open={ open }
+            onClose={ handleClose }
+        >
+            <div className={ classes.imgBox }>
+                <img
+                    src={ url }
+                    alt={ title }
+                />
+            </div>
+        </Modal>
     )
-};
+}
 
 export default CustomModal;
