@@ -1,5 +1,3 @@
-import { colors } from "../../../theme/colors";
-
 const styles = theme => ({
     imgBox: {
         position: 'absolute',

@@ -23,7 +23,6 @@ const CustomCard = ({ photo, handleOpen, handleRemove }) => {
         handleRemove(id)
     }
 
-
     return (
         <>
             <Card className={ classes.card } >
@@ -36,7 +35,7 @@ const CustomCard = ({ photo, handleOpen, handleRemove }) => {
                     onClick={ () => handleOpen(photo) }
                     height="150"
                     src={ thumbnailUrl }
-                    alt="Paella dish"
+                    alt={ title }
                 />
                 <CardContent className={ classes.cardContent }>
                     <Typography variant="body2" color="text.secondary">
