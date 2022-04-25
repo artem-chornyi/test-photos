@@ -45,11 +45,10 @@ const Photos = () => {
             })
     }, [pages])
 
-    const handlerPagination = ({ target }) => {
-        console.log(target);
-        const number = +target.ariaLabel[target.ariaLabel.length - 1];
+    const handlerPagination = (event, value) => {
+        console.log(value, 'test');
 
-        setPages(number);
+        setPages(value);
     }
 
     const handleClose = () => {
