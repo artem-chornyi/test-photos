@@ -13,6 +13,7 @@ const CustomButton = ({ onClick, value, ...props }) => {
             onClick={ onClick }
             className={ classes.button }
             variant='contained'
+            disableElevation={ true }
             { ...props }
         >
             { value }

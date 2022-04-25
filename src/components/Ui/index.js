@@ -5,6 +5,7 @@ import CustomModal from './CustomModal';
 import CustomPagination from './CustomPagination';
 import CustomHeader from './CustomHeader';
 import CustomRoutLink from './CustomRoutLink';
+import CustomSelect from './CustomSelect';
 
 export {
     CustomButton,
@@ -13,5 +14,6 @@ export {
     CustomModal,
     CustomPagination,
     CustomHeader,
-    CustomRoutLink
+    CustomRoutLink,
+    CustomSelect
 };

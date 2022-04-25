@@ -13,6 +13,7 @@ const PhotoList = ({photos}) => {
     const [photosAfterChange, stePhotosAfterChange] = useState([]);
 
     useEffect(() => {
+        console.log('test');
         stePhotosAfterChange(photos)
     }, [photos])
 
@@ -27,10 +28,8 @@ const PhotoList = ({photos}) => {
     }
 
     const handleRemove = id => {
-        stePhotosAfterChange([...photosAfterChange].filter(photo => photo.id !== id))
+        stePhotosAfterChange([...photosAfterChange].filter(photo => photo.id !== id));
     }
-
-    console.log(photos, 'test');
 
     return (
         <div className={ classes.list }>
