@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@mui/styles';
 import PhotoItem from '../PhotoItem';
 import { CustomModal } from '../Ui'
@@ -9,23 +9,35 @@ const useStyles = makeStyles(styles);
 const PhotoList = ({photos}) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
-    const [photo, stePhoto] = useState({})
+    const [photo, stePhoto] = useState({});
+    const [photosAfterChange, stePhotosAfterChange] = useState([]);
+
+    useEffect(() => {
+        stePhotosAfterChange(photos)
+    }, [photos])
 
     const handleClose = () => {
         setOpen(false);
         stePhoto({});
     }
 
-    const handleOpen = (photo) => {
+    const handleOpen = photo => {
         setOpen(true);
         stePhoto(photo);
     }
 
+    const handleRemove = id => {
+        stePhotosAfterChange([...photosAfterChange].filter(photo => photo.id !== id))
+    }
+
+    console.log(photos, 'test');
+
     return (
         <div className={ classes.list }>
-            {photos.map(photo => (
+            {photosAfterChange.map(photo => (
                 <PhotoItem
                     handleOpen={ handleOpen }
+                    handleRemove={ handleRemove }
                     key={ photo.id }
                     photo={ photo }
                 />

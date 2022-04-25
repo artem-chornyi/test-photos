@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from '@mui/material/Modal';
 import { makeStyles } from "@mui/styles";
 import styles from "./styles";
@@ -13,9 +13,6 @@ const CustomModal = ({ open, handleClose, photo, }) => {
         url
     } = photo;
     const classes = useStyles();
-
-
-
 
     return (
         <Modal

@@ -10,7 +10,7 @@ import styles from './styles';
 
 const useStyles = makeStyles(styles);
 
-const CustomCard = ({ photo, handleOpen }) => {
+const CustomCard = ({ photo, handleOpen, handleRemove }) => {
     const classes = useStyles();
 
     const {
@@ -18,6 +18,10 @@ const CustomCard = ({ photo, handleOpen }) => {
         thumbnailUrl,
         title,
     } = photo;
+
+    const onClick = () => {
+        handleRemove(id)
+    }
 
 
     return (
@@ -40,6 +44,7 @@ const CustomCard = ({ photo, handleOpen }) => {
                     </Typography>
                     <CustomButton
                         value="Delete"
+                        onClick={ onClick }
                     />
                 </CardContent>
             </Card>
